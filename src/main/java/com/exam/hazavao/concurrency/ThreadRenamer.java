@@ -22,7 +22,7 @@ public class ThreadRenamer {
   }
 
   public static void renameThread(Thread thread, String newName) {
-    log.info("renaming {}#{} thread to {}", thread.getName(), thread.threadId(), newName);
+    log.info("renaming {}#{} thread to {}", thread.getName(), thread.getId(), newName);
     thread.setName(newName);
   }
 
