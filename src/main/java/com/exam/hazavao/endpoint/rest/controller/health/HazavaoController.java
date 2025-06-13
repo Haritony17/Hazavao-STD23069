@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class HazavaoController {
 
-    private final ChatGptService chatGptService;
+  private final ChatGptService chatGptService;
 
-    @GetMapping("/hazavao")
-    public String hazavao(@RequestParam String teny) throws Exception {
-        return chatGptService.getMalagasyDefinition(teny);
-    }
+  @GetMapping("/hazavao")
+  public String hazavao(@RequestParam String teny) throws Exception {
+    return chatGptService.getMalagasyDefinition(teny);
+  }
 }
