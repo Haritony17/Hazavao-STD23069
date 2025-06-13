@@ -46,7 +46,7 @@ public class ChatGptService {
 
     try (Response response = client.newCall(request).execute()) {
       if (!response.isSuccessful()) {
-        throw new IOException("Erreur d'appel API ChatGPT: " + response);
+        return ("Erreur d'appel API ChatGPT: " + response);
       }
 
       String responseBody = response.body().string();
